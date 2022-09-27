@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/98638255fc.js" crossorigin="anonymous"></script>
+	<title>test</title>
+</head>
+<body>
+	<header>
+		<div class="logo">
+		<img src="img/logo-bootstrap-shoping-cart.png">
+	</div>
+	<div class="menu">
+		<li><a href="index.html">Trang chủ</a></li>
+		<li><a href="">Tất cả sản phẩm</a>
+			<ul class="sub-menu">
+				<li><a href="">Sản phẩm mới</a></li>
+				<li><a href="">ĐD Collection</a></li>
+				<li><a href="">Vòng</a>
+					<ul>
+						<li><a href="">Vòng chân</a></li>
+						<li><a href="">Vòng tay</a></li>
+						<li><a href="">Vòng cổ</a></li>
+						<li><a href="">Vòng vo</a></li>
+					</ul>
+				</li>
+				<li><a href="">Nhẫn</a>
+					<ul>
+						<li><a href="">Nhẫn oversize</a></li>
+						<li><a href="">Nhẫn tay</a></li>
+						<li><a href="">Nhẫn chân</a></li>
+						<li><a href="">Nhẫn tâm</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</li>
+		<li><a href="">Nam</a></li>
+		<li><a href="">Nữ</a></li>
+		<li><a href="">Sale</a></li>
+		<li><a href="">Giỏ hàng</a></li>
+		<li><a href="">Liên hệ</a></li>
+	</div>
+	<div class="others">
+		<li><input placeholder="Tìm kiếm" type="text"><i class="fa fa-search" style=""></i></li>
+		<li><a class="fa fa-paw" href="" style="color: black;"></a></li>
+		<li><a class="fa fa-user" href="" style="color: black;"></a></li>
+		<li><a class="fa fa-shopping-bag" href="" style="color: black;"></a></li>
+	</div>
+	</header>
+	<section id="slides">
+		<div class="aspect-ratio-169">
+			<img src="img/carousel1.png">
+			<img src="img/carousel3.png">
+			<img src="img/bootstrap-templates.png">
+			<img src="img/bootstrap_free-ecommerce.png">
+		</div>
+		<div class="dot-container">
+			<div class="dot active"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+	</section>
+	<section class="app-container">
+		<p>Tải ứng dụng</p>
+		<div class="app-google">
+			<img src="img/google-play-logo.jpg">
+			<img src="img/appStore.png">
+		</div>
+		<p>Nhận tin tức từ website</p>
+		<input type="text" placeholder="Nhập email của bạn..." name="">
+	</section>
+</body>
+<div class="footer">
+	<li><a href=""><img src="img/DDlogo.png"></a></li>
+	<li><a href="">Liên hệ</a></li>
+	<li><a href="">Tuyển dụng</a></li>
+	<li><a href="">Giới thiệu</a></li>
+	<li>
+		<a href="" class="fab fa-facebook-f"></a>
+		<a href="" class="fab fa-twitter"></a>
+		<a href="" class="fab fa-youtube"></a>
+	</li>
+</div>
+
+<div class="footer-bottom">
+	<p>Công ty cổ phần Đặng Dương với số đăng ký kinh doanh: 09880908 <br>
+Địa chỉ đăng ký: Tổ 24, khu 3, P.Vĩnh Niệm, Q.Lê Chân, TP.Hải Phòng, Việt Nam <br>
+Liên hệ tổng giám đốc: anh Dương - <span>0981976782</span> .
+</p>
+	@DDShop All rights reserved
+</div>
+<script>
+	const imgPosition = document.querySelectorAll(".aspect-ratio-169 img");
+	const imgContainer = document.querySelector('.aspect-ratio-169');
+	const dotItem = document.querySelectorAll(".dot");
+	let index = 0;
+	let imgNumber = imgPosition.length;
+	imgPosition.forEach(function(image, index) {
+		//console.log(image, index);
+		image.style.left = index*100 + "%";
+		dotItem[index].addEventListener("click",function(){
+			slider(index);
+		})
+	}) 
+	function imgSlide(){
+		index++;
+		if(index >= imgNumber){
+			index=0;
+		}
+		slider(index);
+		
+	}
+	function slider(index) {
+		imgContainer.style.left = "-" +index*100+ "%";
+		const dotActive = document.querySelector('.active');
+		dotActive.classList.remove("active");
+		dotItem[index].classList.add("active");
+	}
+	setInterval(imgSlide, 3000);
+</script>
+</html>

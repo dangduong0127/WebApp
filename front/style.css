@@ -1,0 +1,189 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 50px;
+	height: 70px;
+	align-items: center;
+}
+.logo{
+	flex: 1;
+}
+.menu{
+	flex: 3;
+	display: flex;
+}
+.menu > li{
+	padding: 0 35px;
+	position: relative;
+}
+.menu > li:hover .sub-menu{
+	visibility: visible;
+	top: 30px;
+}
+.sub-menu{
+	position: absolute;
+	border: 1px solid #ccc;
+	width: 200px;
+	padding: 10px 0 15px 20px;
+	visibility: hidden;
+	top: 50px;
+	transition: 0.3s;
+	z-index: 1;
+	background-color: white;
+}
+.sub-menu > li > a {
+	font-weight: bold;
+	font-size: 15px;
+}
+.sub-menu > ul {
+	padding-left: 0 30px;
+	font-size: 12px!important;
+}
+.menu > li > a{
+	font-size: 20px;
+	font-weight: normal;
+	text-transform: uppercase;
+	display: block;
+	line-height: 20px;
+}
+.others{
+	flex: 1;
+	display: flex;
+}
+.others > li{
+	padding: 0 12px;
+}
+.others > li:first-child {
+	position: relative;
+}
+.others > li:first-child input{
+	width: 100%;
+	border: none;
+	border-bottom:1px solid #333;
+}
+
+.others > li:first-child i {
+	position: absolute;
+
+}
+.aspect-ratio-169{
+	display: block;
+	position: relative;
+	padding-top: 56.25%;
+	transition: 0.3s;
+}
+.aspect-ratio-169 img {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.dot-container{
+	position: absolute;
+	height: 30px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+.dot {
+	height: 15px;
+	width: 15px;
+	background-color: #ccc;
+	border-radius: 50%;
+	margin-right: 12px;
+	cursor: pointer;
+}
+.dot.active {
+	background-color: #333;
+}
+#slides {
+	padding-bottom: 30px;
+	border-bottom: 2px solid #000;
+	overflow: hidden;
+}
+
+
+.app-container {
+	text-align: center;
+	align-items: center;
+	padding: 80px 0 50px 0;
+}
+.app-google {
+	margin: 50px;
+}
+.app-google > img{
+	height: 50px;
+}
+.app-container > p {
+	line-height: 20px;
+	letter-spacing: 1px;
+	font-size: 30px;
+	color: black;
+	font-weight: normal;
+}
+.app-container > input {
+	margin-top: 50px;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding-bottom: 6px;
+	width: 400px;
+	text-align: center;
+	outline: none;
+	font-size: 20px;
+} 
+
+.footer {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	height: 60px;
+	font-size: 18px;
+}
+.footer > li {
+	padding: 0 12px;
+}
+/*.footer > li:after{
+	content:"";
+	display: block;
+	width: 1px;
+	height: 3%;
+	background: #ccc;
+	position: absolute;
+	top: 164%;
+	transform: translateY(-45%);
+}*/
+.footer > li > a > img {
+	height: 75px;
+	margin-bottom: 20px;
+}
+.footer-bottom {
+	text-align: center;
+	padding-top: 12px;
+	padding-left: 12px;
+}
+.footer > li:last-child a{
+	margin-right: 5px;
+	color: #333;
+}
+.footer-bottom > p > span {
+	font-weight: bold;
+}
