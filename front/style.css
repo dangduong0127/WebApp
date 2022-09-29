@@ -31,27 +31,25 @@ header{
 }
 .menu > li:hover .sub-menu{
 	visibility: visible;
-	top: 30px;
+	top: 38px;
 }
 .sub-menu{
 	position: absolute;
 	border: 1px solid #ccc;
-	width: 200px;
-	padding: 10px 0 15px 20px;
+	width: 700px;
+	padding: 15px 0 15px 40px;
 	visibility: hidden;
-	top: 50px;
+	top: 60px;
 	transition: 0.3s;
 	z-index: 1;
 	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+	left: 0px;
 }
-.sub-menu > li > a {
-	padding-right: 20px;
-}
-.sub-menu > ul > li > a{
-	color: blue;
-}
+
 .item-list-submenu{
-	margin-right: 20px;
+	margin-right: 50px;
 }
 .menu > li > a{
 	font-size: 20px;
