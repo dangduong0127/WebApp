@@ -36,8 +36,8 @@ header{
 .sub-menu{
 	position: absolute;
 	border: 1px solid #ccc;
-	width: 700px;
-	padding: 15px 0 15px 40px;
+	width: 1000px;
+	padding: 30px 0 30px 40px;
 	visibility: hidden;
 	top: 60px;
 	transition: 0.3s;
@@ -46,10 +46,20 @@ header{
 	display: flex;
 	flex-wrap: wrap;
 	left: 0px;
+	
 }
-
-.item-list-submenu{
+.cat-submenu {
+	align-items: center;
+}
+.cat-submenu > a{
+	display: block;
+	font-weight: 500;
+	font-size: 14px;
+}
+.item-list-submenu {
+	flex-direction: column;
 	margin-right: 50px;
+	margin-left: 50px;
 }
 .menu > li > a{
 	font-size: 20px;
@@ -84,7 +94,7 @@ header{
 .aspect-ratio-169{
 	display: block;
 	position: relative;
-	padding-top: 41%;
+	padding-top: 38%;
 	transition: 0.3s;
 }
 .aspect-ratio-169 img {
@@ -125,7 +135,7 @@ header{
 .app-container {
 	text-align: center;
 	align-items: center;
-	padding: 80px 0 50px 0;
+	padding: 50px 0 50px 0;
 }
 .app-google {
 	margin: 50px;
