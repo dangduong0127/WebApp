@@ -36,7 +36,7 @@ header{
 .sub-menu{
 	position: absolute;
 	border: 1px solid #ccc;
-	width: 1000px;
+	width: 1100px;
 	padding: 30px 0 30px 40px;
 	visibility: hidden;
 	top: 60px;
@@ -101,10 +101,11 @@ header{
 	display: block;
 	position: absolute;
 	width: 100%;
-	height: aoto%;
+	height: auto%;
 	top: 0;
 	left: 0;
 }
+
 .dot-container{
 	position: absolute;
 	height: 30px;
